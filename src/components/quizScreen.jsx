@@ -21,6 +21,7 @@ function QuizScreen({ quizQuestions, onFinish, onQuit }) {
             }
             else {
                 onFinish([...answers, entry]);
+              
             }
         }, 900);
     }

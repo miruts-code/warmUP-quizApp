@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import StartScreen from "./components/startScreen";
 import QuizScreen from './components/quizScreen';
+import ResultsScreen from './components/resultScreen';
 import { QUESTIONS, QUIZ_LENGTH } from './data/questions';
 import Shuffle from './utils/helpers';
 import './App.css'
@@ -9,6 +10,7 @@ function App() {
   const [learnerName, setLearnerName] = useState('')
   const [learnerEmail, setLearnerEmail] = useState('')
   const [quizQuestions, setQuizQuestions] = useState([]);
+  const [finalAnswers,setFinalAnswers]=useState([])
   
   function handleStart({ name, email, difficulty, category }) {
     console.log("Received in App:", { name, email, difficulty, category });
@@ -29,14 +31,30 @@ function App() {
   function handleQuit() {
     setPage('start');
   }
-  function handleFinish(finalAnwers) {
-    
+  function handleFinish(finalAnswers) {
+    setFinalAnswers(finalAnswers)
+    setPage('results');
+  }
+  function handleRestart() {
+    setPage('start')
   }
   return (
     <div className="app-container">
       {page === "start" && <StartScreen onStart={handleStart} />}
-      {page === "quiz" && <QuizScreen quizQuestions={quizQuestions}
-        onFinish={handleFinish} onQuit={handleQuit} />}
+      {page === "quiz" && (
+        <QuizScreen
+          quizQuestions={quizQuestions}
+          onFinish={handleFinish}
+          onQuit={handleQuit}
+        />
+      )}
+      {page === "results" && (
+        <ResultsScreen
+          learnerName={learnerName}
+          finalAnswers={finalAnswers}
+          onRestart={handleRestart}
+        />
+      )}
     </div>
   );
 }

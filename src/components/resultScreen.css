@@ -1,0 +1,94 @@
+.results-card {
+  max-width: 520px;
+  margin: 40px auto 0;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}
+
+.results-heading {
+  font-family: var(--heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0 0 8px 0;
+}
+
+.score-display {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--accent-hover);
+  margin: 0 0 4px 0;
+}
+
+.score-sub {
+  font-size: 16px;
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.message {
+  color: var(--text);
+  margin: 0 0 24px 0;
+}
+
+.review-heading {
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 8px 0;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.review-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.review-question {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+  margin: 0 0 4px 0;
+}
+
+.review-answer {
+  font-size: 14px;
+  margin: 0;
+}
+
+.review-answer.correct {
+  color: var(--success);
+}
+
+.review-answer.timeout {
+  color: var(--accent-hover);
+}
+
+.review-answer.incorrect {
+  color: var(--danger);
+}
+
+.restart-btn {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  background: var(--primary);
+  color: #ffffff;
+  transition: background 0.15s;
+}
+
+.restart-btn:hover {
+  background: var(--primary-hover);
+}
