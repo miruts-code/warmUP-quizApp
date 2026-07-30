@@ -1,5 +1,5 @@
 export const CATEGORIES = ["Any", "Science", "General Knowledge", "History"];
-export const DIFFICULTIES = ["Easy", "Medium", "Hard"];
+export const DIFFICULTIES = ["easy", "medium", "hard"];
 export const QUESTIONS = [
   {
     id: 1,

@@ -1,0 +1,126 @@
+.quiz-card {
+  max-width: 520px;
+  margin: 40px auto 0;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.quit-btn {
+  background: none;
+  border: none;
+  color: var(--danger);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.quit-btn:hover {
+  text-decoration: underline;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.category-tag {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-hover);
+  font-weight: 600;
+}
+
+.timer {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.timer.timer-warning {
+  color: var(--danger);
+}
+
+.question-text {
+  font-family: var(--heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0 0 20px 0;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  color: #1e293b;
+  transition: border-color 0.15s, background 0.15s, opacity 0.15s;
+}
+
+.option-btn:hover:not(:disabled) {
+  border-color: #818cf8;
+}
+
+.option-btn:disabled {
+  cursor: default;
+}
+
+.option-btn .option-number {
+  color: #94a3b8;
+  margin-right: 8px;
+}
+
+.correct-option{
+  border-color: var(--success);
+  background: #f0fdf4;
+}
+
+.incorrect-option {
+  border-color: var(--danger);
+  background: #fef2f2;
+}
+
+.neutral-option {
+  border-color: #e2e8f0;
+  background: #f8fafc;
+  opacity: 0.6;
+}

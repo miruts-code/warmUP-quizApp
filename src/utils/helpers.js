@@ -1,5 +1,5 @@
 export const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-function shuffle(array) {
+function Shuffle(array) {
     const copy = [...array];
     for (let i = copy.length - 1; i > 0; i--){
         const j = Math.floor(Math.random() * (i + 1));
@@ -7,4 +7,5 @@ function shuffle(array) {
     }
     return copy;
 }
+export default Shuffle;
     

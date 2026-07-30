@@ -6,7 +6,7 @@ function StartScreen({ onStart }) {
     const[name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [difficulty, setDifficulty] = useState('easy')
-    const [category, setCategory] = useState('any')
+    const [category, setCategory] = useState('Any')
     const [error, setError] = useState('');
     const [emailError, setEmailError] = useState('')
     
@@ -17,11 +17,17 @@ function StartScreen({ onStart }) {
             hasError = true;
         }
         if (!email.trim() || !isValidEmail(email.trim())) {
-            setError("plese enter a valid email");
+            setEmailError("plese enter a valid email");
             hasError = true;
         }
-        if (hasError) return;
-        onStart({ name: name.trim(), email: email.trim(), difficulty, category });
+      if (hasError) return;
+      console.log("Sending to App:", {
+        name: name.trim(),
+        email: email.trim(),
+        difficulty,
+        category,
+      });
+      onStart({ name:name.trim(), email:email.trim(), difficulty, category });
     }
         return (
           <div className="start-card">
@@ -50,7 +56,7 @@ function StartScreen({ onStart }) {
             <input
               type="email"
               id="email"
-              className={`text-input ${error ? "input-error" : ""}`}
+              className={`text-input ${emailError ? "input-error" : ""}`}
               value={email}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -65,7 +71,7 @@ function StartScreen({ onStart }) {
                 <button
                   key={d}
                   onClick={()=>setDifficulty(d)}
-                  className={`difficulty-btn ${difficulty === { d } ? "active" : ""}`}
+                  className={`difficulty-btn ${difficulty === d ? "active" : ""}`}
                 >
                   {d}
                 </button>
