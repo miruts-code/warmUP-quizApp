@@ -1,6 +1,8 @@
 # warmUP-quizApp
 
-A timed practice quiz built with React where players choose a difficulty and category, answer questions against the clock, and receive a complete review of their answers at the end.
+A timed practice quiz built with React where players choose a difficulty and category, answer questions against the clock, and receive a complete review of their answers at the end. 
+
+you can try the app here [warmUp-quiz](https://warm-up-quiz-app.vercel.app/)
 
 # Features
 
