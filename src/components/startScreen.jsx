@@ -86,7 +86,5 @@ function StartScreen({ onStart }) {
             
           </div>
         );
-        
-
 }
 export default StartScreen;
