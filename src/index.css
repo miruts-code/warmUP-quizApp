@@ -1,15 +1,15 @@
 :root {
-  --text: #334155;
-  --text-h: #1e1b4b;
-  --bg: #f8fafc;
-  --card-bg: #ffffff;
+  --text: #c7d0dd;
+  --text-h: #efeff5;
+  --bg: #212324;
+  --card-bg: #383737;
   --border: #cbd5e1;
   --accent: #f59e0b;
   --accent-hover: #d97706;
   --primary: #1e1b4b;
   --primary-hover: #312e81;
-  --danger: #ef4444;
-  --success: #16a34a;
+  --danger: #e73030;
+  --success: #0bb047;
 
   --sans: "Inter", system-ui, sans-serif;
   --heading: Georgia, "Times New Roman", serif;
@@ -26,4 +26,11 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-
+.card{
+  max-width: 780px;
+  margin: 64px auto 0;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}

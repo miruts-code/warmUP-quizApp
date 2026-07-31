@@ -48,7 +48,7 @@ function QuizScreen({ quizQuestions, onFinish, onQuit }) {
             onQuit();
     }
     return (
-        <div className="quiz-card">
+        <div className="card">
             <div className="quiz-header">
                 <span>Question{currentIndex + 1} of {quizQuestions.length}</span>
                 <button onClick={handleQuit} className="quit-btn">Quit</button>

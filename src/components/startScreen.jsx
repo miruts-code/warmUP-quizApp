@@ -30,7 +30,7 @@ function StartScreen({ onStart }) {
       onStart({ name:name.trim(), email:email.trim(), difficulty, category });
     }
         return (
-          <div className="start-card">
+          <div className="card">
             <h1 className="start-title">Warm-Up Quiz</h1>
             <p className="start-subtitle">
               Test your knowledge across science, history, and more.

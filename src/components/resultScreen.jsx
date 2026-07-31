@@ -14,7 +14,7 @@ function ResultScreen({ learnerName, finalAnswers, onRestart }) {
        return "Keep practicing! you will get there";
     }
     return (
-      <div className="results-card">
+      <div className="card">
         <h2 className="results-heading">Nice work, {learnerName}!</h2>
         <p className="score-display">
           {score}/{total} <span className="score-sub">({percentage}%)</span>

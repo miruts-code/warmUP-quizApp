@@ -1,29 +1,21 @@
-.results-card {
-  max-width: 520px;
-  margin: 40px auto 0;
-  background: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 32px;
-}
 
 .results-heading {
   font-family: var(--heading);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   color: var(--text-h);
   margin: 0 0 8px 0;
 }
 
 .score-display {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   color: var(--accent-hover);
   margin: 0 0 4px 0;
 }
 
 .score-sub {
-  font-size: 16px;
+  font-size: 18px;
   color: #94a3b8;
   font-weight: 400;
 }
@@ -53,14 +45,14 @@
 }
 
 .review-question {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  color: #1e293b;
+  color:var(--text);
   margin: 0 0 4px 0;
 }
 
 .review-answer {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -82,7 +74,7 @@
   border-radius: 8px;
   padding: 12px 0;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
   cursor: pointer;
   background: var(--primary);
   color: #ffffff;
