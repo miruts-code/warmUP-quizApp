@@ -21,12 +21,6 @@ function StartScreen({ onStart }) {
             hasError = true;
         }
       if (hasError) return;
-      console.log("Sending to App:", {
-        name: name.trim(),
-        email: email.trim(),
-        difficulty,
-        category,
-      });
       onStart({ name:name.trim(), email:email.trim(), difficulty, category });
     }
         return (

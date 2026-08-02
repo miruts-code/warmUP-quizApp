@@ -13,7 +13,6 @@ function App() {
   const [finalAnswers,setFinalAnswers]=useState([])
   
   function handleStart({ name, email, difficulty, category }) {
-    console.log("Received in App:", { name, email, difficulty, category });
     let pool = QUESTIONS.filter((q) => q.difficulty === difficulty);
     console.log("Pool after difficulty filter:", pool.length);
     if (category !== 'Any')
